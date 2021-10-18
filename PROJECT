@@ -1,0 +1,16 @@
+domain: jinphe.github.io
+layout:
+- go.kubebuilder.io/v3
+projectName: demopod-op
+repo: github.com/jinphe/demo-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jinphe.github.io
+  group: batch
+  kind: DemoPod
+  path: github.com/jinphe/demo-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"

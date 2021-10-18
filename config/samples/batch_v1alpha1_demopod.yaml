@@ -1,0 +1,6 @@
+apiVersion: batch.jinphe.github.io/v1alpha1
+kind: DemoPod
+metadata:
+  name: demopod-sample
+spec:
+  replicas: 1

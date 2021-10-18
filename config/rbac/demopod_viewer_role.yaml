@@ -1,0 +1,20 @@
+# permissions for end users to view demopods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: demopod-viewer-role
+rules:
+- apiGroups:
+  - batch.jinphe.github.io
+  resources:
+  - demopods
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.jinphe.github.io
+  resources:
+  - demopods/status
+  verbs:
+  - get

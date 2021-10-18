@@ -1,0 +1,24 @@
+# permissions for end users to edit demopods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: demopod-editor-role
+rules:
+- apiGroups:
+  - batch.jinphe.github.io
+  resources:
+  - demopods
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.jinphe.github.io
+  resources:
+  - demopods/status
+  verbs:
+  - get
